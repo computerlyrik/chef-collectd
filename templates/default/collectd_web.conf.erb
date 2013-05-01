@@ -11,6 +11,13 @@
         AllowOverride None
         Order allow,deny
         Allow from all
+
+<% if @node[:collectd][:collectd_web][:htpasswd] %>
+        AuthType Basic
+        AuthName "Collectd Webinterface"
+        AuthUserFile /etc/apache2/htpasswd
+        Require valid-user
+<% end %>
     </Directory>
 
     ScriptAlias /cgi-bin/ <%= @node[:collectd][:collectd_web][:path] %>/cgi-bin/

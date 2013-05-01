@@ -57,3 +57,10 @@ template "/etc/apache2/sites-available/collectd_web.conf" do
 end
 
 apache_site "collectd_web.conf"
+
+if node[:collectd][:collectd_web][:htpasswd]
+  htpasswd "/etc/apache2/htpasswd" do
+    user "cf"
+    password "cf"
+  end
+end
