@@ -20,6 +20,12 @@
 include_recipe "collectd"
 include_recipe "apache2"
 
+if platform?("ubuntu")
+  apache_site "default" do
+   enable false
+  end
+end
+
 %w(libhtml-parser-perl liburi-perl librrds-perl libjson-perl).each do |name|
   package name
 end
