@@ -1,6 +1,8 @@
 # Threshold configuration for collectd(1).
 #
 # See the section "THRESHOLD CONFIGURATION" in collectd.conf(5) for details.
++Timeout <%= @node[:collectd][:timeout] %> #used for Thresholds
+
 
 #<Threshold>
 #	<Type "counter">
