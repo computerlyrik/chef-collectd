@@ -1,1 +1,1 @@
-node['default']['collectd_web']['htpasswd']=false
+default['collectd']['collectd_web']['htpasswd']=false
