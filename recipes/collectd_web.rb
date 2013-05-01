@@ -58,9 +58,10 @@ end
 
 apache_site "collectd_web.conf"
 
-if node[:collectd][:collectd_web][:htpasswd]
+unless node['collectd']['collectd_web']['htpasswd_username'].nil? &&
+   node['collectd']['collectd_web']['htpasswd_password'].nil?
   htpasswd "/etc/apache2/htpasswd" do
-    user "cf"
-    password "cf"
+    user node['collectd']['collectd_web']['htpasswd_username']
+    password node['collectd']['collectd_web']['htpasswd_password']
   end
 end
