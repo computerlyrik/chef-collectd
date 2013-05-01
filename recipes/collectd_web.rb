@@ -57,5 +57,6 @@ unless node['collectd']['collectd_web']['htpasswd_username'].nil? &&
   htpasswd "/etc/apache2/htpasswd" do
     user node['collectd']['collectd_web']['htpasswd_username']
     password node['collectd']['collectd_web']['htpasswd_password']
+    notifies :restart, resources(:service => "apache2")
   end
 end
