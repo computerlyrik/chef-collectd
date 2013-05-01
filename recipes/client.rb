@@ -28,6 +28,13 @@ if servers.empty?
   raise "No servers found. Please configure at least one node with collectd::server."
 end
 
-collectd_plugin "network" do
-  options :server=>servers
+#test if server recipy is installed to prevent roundtrips on network plugin
+if !node["recipes"].include?("collectd::server")
+  #requirement for network plugin
+  package "libgcrypt11" do
+    action :install
+  end
+  collectd_plugin "network" do
+    options :server=>servers
+  end
 end
