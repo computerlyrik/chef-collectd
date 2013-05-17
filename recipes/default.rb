@@ -23,6 +23,7 @@ end
 
 service "collectd" do
   supports :restart => true, :status => true
+  action [:enable, :start]
 end
 
 directory "/etc/collectd" do
@@ -82,8 +83,4 @@ ruby_block "delete_old_plugins" do
       end
     end
   end
-end
-
-service "collectd" do
-  action [:enable, :start]
 end
