@@ -1,4 +1,4 @@
-ld Status](https://travis-ci.org/computerlyrik/chef-collectd.png?branch=mas
+[![Build Status](https://travis-ci.org/computerlyrik/chef-collectd.png?branch=mas
 ter)](https://travis-ci.org/computerlyrik/chef-collectd)
 
 # DESCRIPTION #
