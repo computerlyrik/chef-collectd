@@ -1,6 +1,11 @@
+ld Status](https://travis-ci.org/computerlyrik/chef-collectd.png?branch=mas
+ter)](https://travis-ci.org/computerlyrik/chef-collectd)
+
 # DESCRIPTION #
 
 Configure and install the [collectd](http://collectd.org/) monitoring daemon.
+
+Code repository: https://github.com/computerlyrik/chef-collectd
 
 # REQUIREMENTS #
 
