@@ -23,9 +23,10 @@ collectd_plugin "network" do
   options :listen=>'0.0.0.0'
 end
 
+=begin
 collectd_plugin "logfile" do
-
 options {:LogLevel => "warning" ,
          :File => "/var/log/collectd.log",
          :PrintSeverity => "true" }
 end
+=end
