@@ -25,7 +25,7 @@ end
 
 collectd_plugin "logfile" do
 
-options [:LogLevel => "warning" ,
+options {:LogLevel => "warning" ,
          :File => "/var/log/collectd.log",
-         :PrintSeverity => "true" ]
+         :PrintSeverity => "true" }
 end
